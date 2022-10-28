@@ -5,9 +5,10 @@
 ======================
 
 Test Management Tool
+``#CN#``
+测试管理工具
 
-
-Description
+Description 描述
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The ``tmt`` tool provides a user-friendly way to work with tests.
@@ -15,56 +16,86 @@ You can comfortably create new tests, safely and easily run tests
 across different environments, review test results, debug test
 code and enable tests in the CI using a consistent and concise
 config.
+``#CN#``
+``tmt``
+工具提供了一种对用户友好的方式处理测试。
+用户可以轻松地创建新的测试，安全轻松地（跨环境）运行测试，查看测试结果，调试测试，
+在持续集成中使用一致且简洁的配置启用测试。
 
 The python module and command-line tool implement the Metadata
 Specification which allows storing all needed test execution data
 directly within a git repository. Together with possibility to
 reference remote repositories it makes it easy to share test
 coverage across projects and distros.
+``#CN#``
+python模块和命令行工具实现了元数据规范，
+它允许将所有需要的测试执行数据直接存储在git存储库中。
+连同引用远程存储库的可能性，它使跨项目和发行版共享测试覆盖变得容易。
 
 The Flexible Metadata Format ``fmf`` is used to store data in both
 human and machine readable way close to the source code. Thanks to
 inheritance and elasticity metadata are organized in the structure
 efficiently, preventing unnecessary duplication.
+``#CN#``
+灵活的元数据格式
+``fmf``
+用于以接近源代码的人类和机器可读方式存储数据。
+由于继承和弹性，元数据被有效地组织在结构中以防止不必要的重复。
 
 
-Specification
+Specification 规范
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There are several metadata levels defined by the specification:
+``#CN#``
+规范定义了几个元数据级别：
 
 **Core** attributes such as `summary` or `description` which are
 common across all levels are defined by the special L0 metadata.
+``#CN#``
+核心属性是由特殊的L0元数据定义的，这些核心属性
+包括摘要或描述等跨越所有级别的通用的属性。
 
 **Tests**, or L1 metadata, define attributes which are closely
 related to individual test cases such as `test` script,
 `framework`, directory `path` where the test should be executed,
 maximum test `duration` or packages required to run the test.
+``#CN#``
+测试，即L1元数据定义了与单个测试用例密切相关的属性，
+例如测试脚本、框架、应该执行测试的目录路径、最长测试持续时间或运行测试所需的软件包。
 
 **Plans**, also called L2 metadata, are used to group relevant
 tests and enable them in the CI. They describe how to `discover`
 tests for execution, how to `provision` the environment, how to
 `prepare` it for testing, how to `execute` tests and `report` test
 results.
+``#CN#``
+计划，也称为 L2 元数据，用于对相关测试进行分组并在CI中启用它们。 它们描述了如何发现要执行的测试、如何配置环境、如何准备测试、如何执行测试和报告测试结果。
 
 **Stories**, which implement the L3 metadata, can be used to track
 implementation, test and documentation coverage for individual
 features or requirements. Thanks to this you can track everything
 in one place, including the project implementation progress.
+``#CN#``
+故事，实现L3元数据，可用于跟踪单个功能或需求的实现、测试和文档覆盖率。
+借助这一点，您可以在一个地方跟踪所有内容，包括项目实施进度。
 
-
-Synopsis
+Synopsis 概要
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Command line usage is straightforward::
+Command line usage is straightforward
+``#CN#``
+命令行使用很简单::
 
     tmt command [options]
 
 
-Examples
+Examples 示例
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Let's see which tests, plans and stories are available::
+Let's see which tests, plans and stories are available
+``#CN#``
+让我们看看有哪些测试、计划和故事可用::
 
     tmt
 
