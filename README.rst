@@ -16,11 +16,23 @@ across different environments, review test results, debug test
 code and enable tests in the CI using a consistent and concise
 config.
 
+
+tmt 工具提供了一种用户友好的方式来处理测试。 您可以轻松地创建新测试，
+在不同环境中安全轻松地运行测试，查看测试结果，
+调试测试代码并使用一致且简洁的配置在 CI 中启用测试。
+
+
 The python module and command-line tool implement the Metadata
 Specification which allows storing all needed test execution data
 directly within a git repository. Together with possibility to
 reference remote repositories it makes it easy to share test
 coverage across projects and distros.
+
+
+python 模块和命令行工具实现了元数据规范，它允许将所有需要的测试
+执行数据直接存储在 git 存储库中。 连同引用远程存储库的可能性，
+它使跨项目和发行版共享测试覆盖率变得容易。
+
 
 The Flexible Metadata Format ``fmf`` is used to store data in both
 human and machine readable way close to the source code. Thanks to
@@ -28,18 +40,36 @@ inheritance and elasticity metadata are organized in the structure
 efficiently, preventing unnecessary duplication.
 
 
+灵活的元数据格式 fmf 用于以接近源代码的人类和机器可读方式存储数据。 
+由于继承和弹性，元数据有效地组织在结构中，防止不必要的重复。
+
+
 Specification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There are several metadata levels defined by the specification:
 
+
+规范定义了几个元数据级别：
+
+
 **Core** attributes such as `summary` or `description` which are
 common across all levels are defined by the special L0 metadata.
+
+
+诸如摘要或描述等所有级别通用的核心属性由特殊的 L0 元数据定义。
+
 
 **Tests**, or L1 metadata, define attributes which are closely
 related to individual test cases such as `test` script,
 `framework`, directory `path` where the test should be executed,
 maximum test `duration` or packages required to run the test.
+
+
+测试或 L1 元数据定义了与单个测试用例密切相关的属性，
+例如测试脚本、框架、应该执行测试的目录路径、
+最长测试持续时间或运行测试所需的包。
+
 
 **Plans**, also called L2 metadata, are used to group relevant
 tests and enable them in the CI. They describe how to `discover`
@@ -47,10 +77,21 @@ tests for execution, how to `provision` the environment, how to
 `prepare` it for testing, how to `execute` tests and `report` test
 results.
 
+
+计划，也称为 L2 元数据，用于对相关测试进行分组并在 CI 中启用它们。 
+它们描述了如何发现要执行的测试、如何配置环境、
+如何准备测试、如何执行测试和报告测试结果。
+
+
 **Stories**, which implement the L3 metadata, can be used to track
 implementation, test and documentation coverage for individual
 features or requirements. Thanks to this you can track everything
 in one place, including the project implementation progress.
+
+
+实现 L3 元数据的 Stories 可用于跟踪单个功能或需求的实现、测试和文档覆盖率。 
+多亏了这一点，您可以在一个地方跟踪所有内容，包括项目实施进度。
+
 
 
 Synopsis
@@ -66,15 +107,26 @@ Examples
 
 Let's see which tests, plans and stories are available::
 
+
+让我们看看有哪些测试、计划和故事可用：
+
+
     tmt
 
 Initialize the metadata tree in the current directory, optionally
-with example content based on templates::
+with example content based on templates
+
+
+初始化当前目录中的元数据树，可选地使用基于模板的示例内容::
+
+
 
     tmt init
     tmt init --template base
 
-Run all or selected steps for each plan::
+Run all or selected steps for each plan
+
+::
 
     tmt run
     tmt run discover
