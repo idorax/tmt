@@ -12,9 +12,22 @@ Feel free and welcome to contribute to this project. You can start
 with filing issues and ideas for improvement in GitHub tracker__.
 Our favorite thoughts from The Zen of Python:
 
+
+随意并欢迎为这个项目做出贡献。您可以从提交问题和改进 
+GitHub跟踪器的想法开始。Python之禅中我们最喜欢的想法：
+
+
 * Beautiful is better than ugly.
 * Simple is better than complex.
 * Readability counts.
+
+
+* 美丽总比丑陋好。
+
+* 简单胜于复杂。
+
+* 可读性很重要。
+
 
 We respect the `PEP8`__ Style Guide for Python Code. Here's a
 couple of recommendations to keep on mind when writing code:
